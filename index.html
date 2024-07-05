@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>飞行射击游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <video id="background-video" loop muted>
+            <source src="your-background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="player">
+            <img src="plane.svg" alt="Player plane" class="player-svg">
+        </div>
+        <div id="score">分数: <span id="score-value">0</span></div>
+        <div id="health">生命值: <span id="health-value">100</span></div>
+        <div id="level">关卡: <span id="level-value">1</span></div>
+        <div id="start-screen">
+            <h1>飞行射击游戏</h1>
+            <button id="start-button">开始游戏</button>
+        </div>
+        <div id="game-over" class="hidden">
+            <h2>游戏结束</h2>
+            <p>你的得分是: <span id="final-score"></span></p>
+            <button id="restart-button">再来一次</button>
+        </div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="your-background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>

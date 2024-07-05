@@ -1,0 +1,158 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    touch-action: none;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    touch-action: none;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#player {
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.player-svg {
+    width: 100%;
+    height: 100%;
+}
+
+#score, #health, #level {
+    position: absolute;
+    top: 2vh;
+    color: white;
+    font-size: 4vw;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    display: none;
+}
+
+#score {
+    left: 2vw;
+}
+
+#health {
+    right: 2vw;
+}
+
+#level {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bullet {
+    width: 1.5vw;
+    height: 3vw;
+    background-color: #FFFF00;
+    position: absolute;
+}
+
+.enemy {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.enemy-normal {
+    width: 20vw;
+    height: 20vw;
+}
+
+.enemy-elite {
+    width: 25;
+    height: 25vw;
+}
+
+.enemy-boss {
+    width: 35vw;
+    height: 35vw;
+}
+
+.enemy-health {
+    width: 100%;
+    height: 5px;
+    background-color: #ff0000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.power-up {
+    width: 6vw;
+    height: 6vw;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.power-up-double {
+    background-color: yellow;
+}
+
+.power-up-fan {
+    background-color: blue;
+}
+
+.power-up-slow {
+    background-color: green;
+}
+
+#start-screen, #game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5vw;
+    text-align: center;
+    border-radius: 2vw;
+    font-size: 4vw;
+}
+
+#start-button, #restart-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 2vw 4vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 4vw;
+    margin: 2vw 0;
+    cursor: pointer;
+    border-radius: 1vw;
+}
+
+.hidden {
+    display: none;
+}
+
+#game-container.game-over {
+    cursor: default;
+}
